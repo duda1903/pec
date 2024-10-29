@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Exibindo os dados das empresas na página
             empresas.forEach(empresa => {
                 const empresaCard = document.createElement('div');
-                empresaCard.className = 'col-md-4 mb-4'; // Bootstrap grid para organizar os cards
+                empresaCard.className = 'col-12 mb-4 d-flex justify-content-center';
                 empresaCard.innerHTML = `
                     <div class="cardEmpresa card h-100">
                         <div class="card-body">

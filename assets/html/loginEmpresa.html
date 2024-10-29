@@ -25,16 +25,12 @@
                 <form id="formulario">
                     <p id="pLog">LOGIN DE EMPRESA</p>
                     <div class="input-field">
-                        <input type="email" id="email" class="form-control" placeholder="E-mail" required>
-                        <i class="fas fa-envelope icon"></i>
-                    </div>
-                    <div class="input-field">
                         <input type="cnpj" id="cnpj" class="form-control" placeholder="CNPJ" required>
                         <i class="fas fa-envelope icon"></i>
                     </div>
                     <div class="input-field">
                         <input type="password" id="password" class="form-control" placeholder="Senha" required>
-                        <i class="fas fa-eye-slash icon" id="togglePassword"></i>
+                        <i class="fas fa-eye-slash icon" id="togglePassword"  onclick="togglePassword()"></i></i>
                     </div>
                     <!-- Lembrar de mim / Esqueci a senha -->
                     <div class="forget">

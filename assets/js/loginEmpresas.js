@@ -2,7 +2,6 @@ document.getElementById('formulario').addEventListener('submit', async function 
     event.preventDefault();
 
     // Captura os valores do formulário
-    const emailEmpresa = document.getElementById('email').value;
     const cnpj = document.getElementById('cnpj').value;
     const senha = document.getElementById('password').value;
 
@@ -16,7 +15,7 @@ document.getElementById('formulario').addEventListener('submit', async function 
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ emailEmpresa, cnpj, senha }),
+            body: JSON.stringify({cnpj, senha }),
         });
 
         // Verifica se a resposta foi bem-sucedida
@@ -37,3 +36,18 @@ document.getElementById('formulario').addEventListener('submit', async function 
         mensagemElement.textContent = 'Ocorreu um erro ao tentar fazer login. Tente novamente mais tarde.';
     }
 });
+
+function togglePassword() { 
+    const senhaInput = document.getElementById('password');
+    const toggleIcon = document.getElementById('togglePassword');
+
+    if (senhaInput.type === 'password') {
+        senhaInput.type = 'text'; 
+        toggleIcon.classList.remove('fa-eye-slash'); 
+        toggleIcon.classList.add('fa-eye'); 
+    } else {
+        senhaInput.type = 'password'; 
+        toggleIcon.classList.remove('fa-eye'); 
+        toggleIcon.classList.add('fa-eye-slash'); 
+    }
+}

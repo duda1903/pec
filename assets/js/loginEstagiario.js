@@ -33,3 +33,20 @@ document.getElementById('formulario').addEventListener('submit', async function 
         mensagemElement.textContent = 'Ocorreu um erro ao tentar fazer login. Tente novamente mais tarde.';
     }
 });
+
+
+function togglePassword() { 
+    const senhaInput = document.getElementById('senha');
+    const toggleIcon = document.getElementById('togglePassword');
+
+    if (senhaInput.type === 'password') {
+        senhaInput.type = 'text'; 
+        toggleIcon.classList.remove('fa-eye-slash'); 
+        toggleIcon.classList.add('fa-eye'); 
+    } else {
+        senhaInput.type = 'password'; 
+        toggleIcon.classList.remove('fa-eye'); 
+        toggleIcon.classList.add('fa-eye-slash'); 
+    }
+}
+
