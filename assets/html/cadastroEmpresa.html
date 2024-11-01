@@ -34,14 +34,38 @@
                     </div>
 
                     <div class="input-field-cad">
-                        <input type="text" id="cidade" placeholder="Cidade">
+                        <select id="cidade">
+                            <option value="" disabled selected>Selecione sua cidade</option>
+                            <option value="Igrejinha">Igrejinha</option>
+                            <option value="Taquara">Taquara</option>
+                            <option value="Gramado">Gramado</option>
+                            <option value="Canela">Canela</option>
+                            <option value="Três Coroas">Três Coroas</option>
+                            <option value="Parobé">Parobé</option>
+                            <option value="Araricá">Araricá</option>
+                            <option value="Nova Hartz">Nova Hartz</option>
+                            <option value="Campo Bom">Campo Bom</option>
+                            <option value="Sapiranga">Sapiranga</option>
+                        </select>
                         <i class="fas fa-city icon"></i>
                     </div>
+
 
                     <div class="input-field-cad">
                         <input type="text" id="descricao" placeholder="Descreva a sua empresa">
                         <i class="fas fa-star icon"></i>
                     </div>
+
+                    <div class="input-field-cad">
+                        <input type="text" id="cnpj" placeholder="CNPJ">
+                        <i class="fas fa-id-card icon"></i>
+                    </div>
+                    
+                    <div class="input-field-cad">
+                        <input type="password" id="senha" placeholder="Senha">
+                        <i class="fas fa-lock icon"></i>
+                    </div>
+                    
 
                     <div class="erro">
                         <p id="mensagemErro" style="color: red;"></p>
@@ -57,7 +81,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="../js/cadastro.js"></script>
+    <script src="../js/cadastroEmpresa.js"></script>
 </body>
 
 </html>

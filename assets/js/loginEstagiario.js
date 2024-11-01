@@ -21,10 +21,9 @@ document.getElementById('formulario').addEventListener('submit', async function 
             mensagemElement.textContent = 'Login realizado com sucesso!';
 
             window.location.href = '../html/home.html';
-            console.log('../html/home.html');
         } else {
             const errorData = await response.json();
-            mensagemElement.style.color = 'red';
+            mensagemElement.style.color = 'red';S
             mensagemElement.textContent = errorData.message;
         }
     } catch (error) {
