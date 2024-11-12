@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,25 +54,33 @@
         }
 
         .card {
-            background-color: #fdfdfd; /* Alterando a cor de fundo do card */
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adicionando uma sombra mais forte */
+            background: linear-gradient(135deg, #4a90e2, #72b0ec); /* Gradiente azul */
+            border-radius: 15px; /* Borda arredondada */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra */
             padding: 1rem;
             margin: 1rem 0;
+            color: #fff; /* Cor do texto */
+            max-width: 80%; /* Ajuste de largura */
         }
 
         h5 {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             margin-bottom: 0.5rem;
         }
 
         .card-text {
             font-size: 0.9rem;
-            color: #000;
+            color: #f1f1f1;
         }
 
         #container-home {
             padding: 2rem;
+        }
+
+        .row.justify-content-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -85,7 +92,6 @@
                 <div class="navbar-brand-container">
                     <p class="navbar-brand">PEC - Portal de estágios do Cimol</p>
                 </div>
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -132,5 +138,4 @@
         crossorigin="anonymous"></script>
     <script src="../js/estagiarios.js"></script>
 </body>
-
 </html>
