@@ -18,6 +18,7 @@ document.getElementById('adminForm').addEventListener('submit', async (event) =>
   
       if (response.ok) {
         responseMessage.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+        window.location.href = "../html/addVaga.html"
       } else {
         responseMessage.innerHTML = `<div class="alert alert-danger">Erro: ${data.error}</div>`;
       }

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 <p><strong>Email da Empresa:</strong> ${vaga.emailEmpresa}</p>
                                 <p><strong>Telefone da Empresa:</strong> ${vaga.telEmpresa}</p>
                             </div>
-                            <button class="btn btn-primary" onclick="toggleDetails(this)">Saiba mais</button>
+                            <button class="btn btn-primary custom-button" onclick="toggleDetails(this)">Saiba mais</button>
                         </div>
                     </div>
                 `;

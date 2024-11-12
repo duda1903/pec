@@ -24,26 +24,17 @@
             <div class="form">
                 <form id="formulario">
                     <p id="pLog">LOGIN DA ADMINISTRAÇÃO</p>
-                    <a href="../html/loginEmpresa.html">SOU EMPRESA</a>
-                    <a href="../../index.html">SOU ESTAGIÁRIO</a>
-                    <div class="input-field">
-                        <input type="email" id="email" class="form-control" placeholder="E-mail" required>
-                        <i class="fas fa-envelope icon"></i>
-                    </div>
                     <div class="input-field">
                         <input type="text" id="cpf" class="form-control" placeholder="CPF" required>
                         <i class="fas fa-id-card icon"></i>
                     </div>
-                    
+
                     <div class="input-field">
                         <input type="password" id="password" class="form-control" placeholder="Senha" required>
-                        <i class="fas fa-eye-slash icon" id="togglePassword"></i>
+                        <i class="fas fa-eye-slash icon" id="togglePassword" onclick="togglePassword()"></i>
                     </div>
                     <!-- Lembrar de mim / Esqueci a senha -->
                     <div class="forget">
-                        <label>
-                            <input type="checkbox"> Lembrar de mim
-                        </label>
                         <a href="#">Esqueci a senha</a>
                     </div>
                     <button type="submit">ENTRAR</button>
@@ -51,6 +42,11 @@
                         <p>Não tem uma conta? <a href="cadastroAdm.html">Cadastre-se aqui.</a></p>
                     </div>
                     <p id="mensagem" style="color: red;"></p>
+                    <div class="opcoes">
+                        <p>Ou</p>
+                        <button type="button" class="btn btn-outline-primary" onclick="window.location.href='../../index.html'">Login de estagiário</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="window.location.href='loginEmpresa.html'">Login de empresa</button>
+                    </div>
                 </form>
             </div>
         </div>

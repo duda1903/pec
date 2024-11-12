@@ -16,10 +16,14 @@ document.getElementById('vagaForm').addEventListener('submit', async (event) => 
     };
 
     try {
+        // Obtenha o token de autenticação armazenado (substitua conforme necessário)
+        const token = localStorage.getItem('token'); // ou sessionStorage.getItem('token');
+
         const response = await fetch('http://localhost:3000/api/vagas', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}` // Envia o token no cabeçalho
             },
             body: JSON.stringify(formData),
         });
