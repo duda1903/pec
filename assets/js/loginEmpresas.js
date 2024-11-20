@@ -10,7 +10,7 @@ document.getElementById('formulario').addEventListener('submit', async function 
 
     try {
         // Faz a requisição POST para a rota de login
-        const response = await fetch('http://localhost:3000/api/empresas/login', {
+        const response = await fetch('https://apitcc.fly.dev/api/empresas/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ document.getElementById('formulario').addEventListener('submit', async function 
             mensagemElement.style.color = 'green';
             mensagemElement.textContent = 'Login realizado com sucesso!';
 
-                window.location.href = '../html/estagiarios.html';
+                window.location.href = '../html/empresa/estagiariosEmpresa.html';
         } else {
             const errorData = await response.json();
             mensagemElement.style.color = 'red';

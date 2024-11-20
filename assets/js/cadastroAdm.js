@@ -7,7 +7,7 @@ document.getElementById('adminForm').addEventListener('submit', async (event) =>
     const senha = document.getElementById('senha').value;
   
     try {
-      const response = await fetch('http://localhost:3000/api/administracao/cadastro', {
+      const response = await fetch('https://apitcc.fly.dev/api/administracao/cadastro', { /*https://apitcc.fly.dev/api/vagas/3*/
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, nome, cpf, senha })

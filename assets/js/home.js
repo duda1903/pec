@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const vagasLista = document.getElementById("vagas-lista");
 
     try {
-        const response = await fetch('http://localhost:3000/api/vagas');
+        const response = await fetch('https://apitcc.fly.dev/api/vagas');
         const vagas = await response.json();
 
         if (vagas.length > 0) {

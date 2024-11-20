@@ -12,7 +12,7 @@ document.getElementById('formulario-cad').addEventListener('submit', async (even
     const senha = document.getElementById('senha').value;
     const data = { nome, cidade, habilidades, curso, formacaoAcademica, telefone, email, links, senha };
     try {
-      const response = await fetch('http://localhost:3000/api/estagiario', {
+      const response = await fetch('https://apitcc.fly.dev/api/estagiario', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -20,7 +20,8 @@ document.getElementById('formulario-cad').addEventListener('submit', async (even
         body: JSON.stringify(data)
       });
       if (response.ok) {
-        window.location.href = '../html/home.html';
+        window.location.href = "../html/estagiario/empresasEstagiario.html";
+
       }
       else {
         const result = await response.json();

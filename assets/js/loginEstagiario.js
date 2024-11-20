@@ -3,11 +3,11 @@ document.getElementById('formulario').addEventListener('submit', async function 
 
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
-
     const mensagemElement = document.getElementById('mensagem');
 
     try {
-        const response = await fetch('http://localhost:3000/api/estagiario/login', {
+        // Envia a requisição para o backend para autenticação
+        const response = await fetch('https://apitcc.fly.dev/api/estagiario/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -16,14 +16,20 @@ document.getElementById('formulario').addEventListener('submit', async function 
         });
 
         if (response.ok) {
+            // Login bem-sucedido, salva o token no localStorage
             const data = await response.json();
+            localStorage.setItem('token', data.token); // Salva o token no localStorage
+
             mensagemElement.style.color = 'green';
             mensagemElement.textContent = 'Login realizado com sucesso!';
+            console.log(window.location.href); // Antes de redirecionar
+            window.location.href = '/assets/html/estagiario/empresasEstagiario.html';
 
-            window.location.href = '../html/home.html';
+
         } else {
+            // Exibe a mensagem de erro
             const errorData = await response.json();
-            mensagemElement.style.color = 'red';S
+            mensagemElement.style.color = 'red';
             mensagemElement.textContent = errorData.message;
         }
     } catch (error) {
@@ -33,7 +39,7 @@ document.getElementById('formulario').addEventListener('submit', async function 
     }
 });
 
-
+// Função para alternar a visibilidade da senha
 function togglePassword() { 
     const senhaInput = document.getElementById('senha');
     const toggleIcon = document.getElementById('togglePassword');
@@ -48,4 +54,3 @@ function togglePassword() {
         toggleIcon.classList.add('fa-eye-slash'); 
     }
 }
-

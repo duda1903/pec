@@ -6,7 +6,7 @@ document.getElementById("formulario").addEventListener("submit", async (event) =
   const senha = document.getElementById("password").value;
 
   try {
-    const response = await fetch("http://localhost:3000/api/administracao/login", {
+    const response = await fetch("https://apitcc.fly.dev/api/administracao/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -21,7 +21,7 @@ document.getElementById("formulario").addEventListener("submit", async (event) =
       localStorage.setItem("token", data.token);
       localStorage.setItem('token', data.token);
       // Redirecionar para a página da administração
-      window.location.href = "../html/addVaga.html";
+      window.location.href = "./adm/addVaga.html";
     } else {
       document.getElementById("mensagem").innerText = data.error || "Erro ao realizar login";
     }

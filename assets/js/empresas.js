@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para buscar as empresas da API
     const carregarEmpresas = async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/empresas');
+            const response = await fetch('https://apitcc.fly.dev/api/empresas');
             if (!response.ok) {
                 throw new Error('Erro ao buscar as empresas');
             }

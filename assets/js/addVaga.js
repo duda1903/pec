@@ -19,7 +19,7 @@ document.getElementById('vagaForm').addEventListener('submit', async (event) => 
         // Obtenha o token de autenticação armazenado (substitua conforme necessário)
         const token = localStorage.getItem('token'); // ou sessionStorage.getItem('token');
 
-        const response = await fetch('http://localhost:3000/api/vagas', {
+        const response = await fetch('https://apitcc.fly.dev/api/vagas', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

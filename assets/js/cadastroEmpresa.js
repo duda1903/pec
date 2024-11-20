@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Envia a requisição para a rota de cadastro
-            const response = await fetch('http://localhost:3000/api//empresas', {
+            const response = await fetch('https://apitcc.fly.dev/api/empresas', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchEstagiarios();
 
     function fetchEstagiarios() {
-        fetch('http://localhost:3000/api/estagiarios')
+        fetch('https://apitcc.fly.dev/api/estagiarios')
             .then(response => response.json())
             .then(estagiarios => {
                 // Seleciona o elemento onde os dados serão exibidos
@@ -14,9 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     estagiarios.forEach(estagiario => {
                         // Cria um card para cada estagiário
                         const card = document.createElement('div');
-                        card.className = 'col-md-3 mb-4';
-
-                        // Conteúdo do card
+                        card.className = 'col-12 mb-4 d-flex justify-content-center';
                         card.innerHTML = `
                             <div class="card-body">
                                 <h5 class="card-title">${estagiario.nome}</h5>
